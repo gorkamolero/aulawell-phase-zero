@@ -43,8 +43,10 @@ export default function HomePage() {
                   <Button asChild size="lg" className="bg-gold hover:bg-gold/90 text-navy font-semibold border-0 shadow-lg hover:shadow-xl transition-all">
                     <Link href="/contact">Book Free Consultation</Link>
                   </Button>
-                  <Button asChild variant="outline" size="lg" className="border-gold text-gold hover:bg-gold hover:text-navy transition-all">
-                    <Link href="#services">View Our Courses</Link>
+                  <Button asChild size="lg" className="bg-white/10 hover:bg-white/20 text-white border border-white/20 shadow-lg hover:shadow-xl transition-all">
+                    <a href="https://wa.me/447123456789" target="_blank" rel="noopener noreferrer">
+                      WhatsApp Me
+                    </a>
                   </Button>
                 </div>
               </FadeIn>
