@@ -29,10 +29,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${playfair.variable} font-sans`}>
-        <ContactBar />
-        <Navigation />
-        <main className="flex-grow min-h-screen">{children}</main>
-        <Footer />
+        <div className="flex flex-col min-h-screen">
+          <ContactBar />
+          <Navigation />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+        </div>
         <WhatsAppButton />
       </body>
     </html>

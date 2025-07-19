@@ -36,15 +36,15 @@ export function Navigation() {
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex h-28 md:h-32 items-center justify-between">
+        <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 transition-transform hover:scale-105">
             <Image
               src="/aulawell-logo.png"
               alt="Aulawell English"
-              width={400}
-              height={100}
-              className="h-24 md:h-28 w-auto"
+              width={300}
+              height={80}
+              className="w-48 md:w-64 h-auto"
               priority
             />
           </Link>
