@@ -43,7 +43,7 @@ export default function HomePage() {
                   <Button asChild size="lg" className="bg-gold hover:bg-gold/90 text-navy font-semibold border-0 shadow-lg hover:shadow-xl transition-all">
                     <Link href="/contact">Book Free Consultation</Link>
                   </Button>
-                  <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-navy transition-all">
+                  <Button asChild variant="outline" size="lg" className="border-gold text-gold hover:bg-gold hover:text-navy transition-all">
                     <Link href="#services">View Our Courses</Link>
                   </Button>
                 </div>
