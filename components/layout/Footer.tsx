@@ -1,0 +1,75 @@
+import Link from "next/link"
+import { Phone, Mail, MapPin } from "lucide-react"
+
+export function Footer() {
+  return (
+    <footer className="bg-navy text-white">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* About Section */}
+          <div>
+            <h3 className="text-xl font-bold mb-4">Aulawell English</h3>
+            <p className="text-slate-300 mb-4">
+              Expert English tutoring tailored to your needs. From GCSE to IELTS, 
+              we help students achieve academic excellence and build confidence.
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-xl font-bold mb-4">Quick Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/about" className="text-slate-300 hover:text-white transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/academic-english" className="text-slate-300 hover:text-white transition-colors">
+                  Academic English
+                </Link>
+              </li>
+              <li>
+                <Link href="/english-language" className="text-slate-300 hover:text-white transition-colors">
+                  English Language
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-slate-300 hover:text-white transition-colors">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-xl font-bold mb-4">Contact Us</h3>
+            <ul className="space-y-3">
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-slate-400" />
+                <a href="tel:+447123456789" className="text-slate-300 hover:text-white transition-colors">
+                  +44 7123 456789
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Mail className="h-4 w-4 text-slate-400" />
+                <a href="mailto:info@aulawellenglish.com" className="text-slate-300 hover:text-white transition-colors">
+                  info@aulawellenglish.com
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <MapPin className="h-4 w-4 text-slate-400" />
+                <span className="text-slate-300">London, UK</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-white/20 mt-8 pt-8 text-center text-white/70">
+          <p>&copy; {new Date().getFullYear()} Aulawell English. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  )
+}
