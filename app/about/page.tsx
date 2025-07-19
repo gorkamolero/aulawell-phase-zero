@@ -1,4 +1,5 @@
 import { CheckCircle, Users, Target, Award } from "lucide-react"
+import Image from "next/image"
 import { FadeIn } from "@/components/ui/fade-in"
 import type { Metadata } from "next"
 
@@ -26,10 +27,23 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Mission Section */}
+      {/* Mission Section with Image */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
+            <FadeIn className="mb-12">
+              <div className="relative h-[400px] w-full rounded-xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/student-studying.jpg"
+                  alt="Professional English tutoring"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent" />
+              </div>
+            </FadeIn>
+            
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <FadeIn>
                 <h2 className="text-3xl font-bold text-navy mb-6 font-serif">
