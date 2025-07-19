@@ -19,8 +19,9 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-slate-50 to-white py-20 lg:py-32">
-        <div className="container mx-auto px-4">
+      <section className="relative bg-gradient-to-br from-navy/5 via-white to-gold/5 py-20 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 opacity-50" style={{backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239CA3AF' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E)")`}}></div>
+        <div className="container mx-auto px-4 relative z-10">
           <FadeIn className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-navy mb-6 font-serif">
               Expert English Tutoring for Academic Success
@@ -41,7 +42,7 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-white">
+      <section id="services" className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <FadeIn className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-navy mb-4 font-serif">
@@ -54,9 +55,11 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <FadeIn delay={100}>
-              <Card className="hover:shadow-xl transition-all duration-300 h-full hover:-translate-y-1">
+              <Card className="hover:shadow-xl transition-all duration-300 h-full hover:-translate-y-1 bg-white border-navy/10">
                 <CardHeader>
-                  <GraduationCap className="h-12 w-12 text-navy mb-4" />
+                  <div className="bg-navy/10 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                    <GraduationCap className="h-8 w-8 text-navy" />
+                  </div>
                   <CardTitle className="text-navy">Academic English</CardTitle>
                   <CardDescription>KS3 to IB Preparation</CardDescription>
                 </CardHeader>
@@ -87,9 +90,11 @@ export default function HomePage() {
             </FadeIn>
 
             <FadeIn delay={200}>
-              <Card className="hover:shadow-xl transition-all duration-300 h-full hover:-translate-y-1">
+              <Card className="hover:shadow-xl transition-all duration-300 h-full hover:-translate-y-1 bg-white border-gold/20">
                 <CardHeader>
-                  <BookOpen className="h-12 w-12 text-gold mb-4" />
+                  <div className="bg-gold/10 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                    <BookOpen className="h-8 w-8 text-gold" />
+                  </div>
                   <CardTitle className="text-navy">English Language</CardTitle>
                   <CardDescription>General & Exam Preparation</CardDescription>
                 </CardHeader>
@@ -123,7 +128,7 @@ export default function HomePage() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-gradient-to-b from-white to-navy/5">
         <div className="container mx-auto px-4">
           <FadeIn className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-navy mb-4 font-serif">
@@ -175,7 +180,7 @@ export default function HomePage() {
       </section>
 
       {/* Class Options Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gold/5">
         <div className="container mx-auto px-4">
           <FadeIn className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-navy mb-4 font-serif">
@@ -188,7 +193,7 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <FadeIn delay={100}>
-              <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
+              <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full bg-white/80">
                 <CardHeader>
                   <CardTitle className="text-navy">Private 1-to-1 Lessons</CardTitle>
                 </CardHeader>
@@ -220,7 +225,7 @@ export default function HomePage() {
             </FadeIn>
 
             <FadeIn delay={200}>
-              <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
+              <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full bg-white/80">
                 <CardHeader>
                   <CardTitle className="text-navy">Small Group Classes</CardTitle>
                 </CardHeader>
@@ -255,7 +260,7 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
         <div className="container mx-auto px-4">
           <FadeIn className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-navy mb-4 font-serif">
@@ -268,7 +273,7 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <FadeIn delay={100}>
-              <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
+              <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full bg-white/80">
                 <CardContent className="pt-6">
                   <div className="flex mb-4">
                     {[...Array(5)].map((_, i) => (
@@ -286,7 +291,7 @@ export default function HomePage() {
             </FadeIn>
 
             <FadeIn delay={200}>
-              <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
+              <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full bg-white/80">
                 <CardContent className="pt-6">
                   <div className="flex mb-4">
                     {[...Array(5)].map((_, i) => (
@@ -304,7 +309,7 @@ export default function HomePage() {
             </FadeIn>
 
             <FadeIn delay={300}>
-              <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
+              <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full bg-white/80">
                 <CardContent className="pt-6">
                   <div className="flex mb-4">
                     {[...Array(5)].map((_, i) => (

@@ -16,3 +16,8 @@ This project uses **pnpm** as the package manager. Use `pnpm` instead of `npm` f
 - TypeScript
 - Tailwind CSS
 - shadcn/ui components
+
+## IMPORTANT RULES
+- NEVER run `pnpm dev` or any development server commands
+- Only run build, lint, and test commands when needed
+- I am an AI assistant, not a human - I cannot view running applications
