@@ -17,8 +17,17 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Aulawell English - Expert English Tutoring",
-  description: "Private lessons and group classes for Academic English and English Language. From GCSE to IELTS preparation.",
+  title: "Aulawell English - Expert English Tutoring | Private & Group Classes",
+  description: "Professional English tutoring for Academic English (GCSE, A-Level, IB) and Language courses (IELTS, FCE). Private lessons and small group classes available.",
+  keywords: "English tutoring, GCSE English, A-Level English, IB English, IELTS preparation, FCE, private English lessons, English classes",
+  authors: [{ name: "Aulawell English" }],
+  openGraph: {
+    title: "Aulawell English - Expert English Tutoring",
+    description: "Transform your English skills with expert tutoring",
+    type: "website",
+    url: "https://aulawell.co",
+    siteName: "Aulawell English",
+  },
 };
 
 export default function RootLayout({

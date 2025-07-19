@@ -25,16 +25,6 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/academic-english" className="text-slate-300 hover:text-white transition-colors">
-                  Academic English
-                </Link>
-              </li>
-              <li>
-                <Link href="/english-language" className="text-slate-300 hover:text-white transition-colors">
-                  English Language
-                </Link>
-              </li>
-              <li>
                 <Link href="/contact" className="text-slate-300 hover:text-white transition-colors">
                   Contact
                 </Link>
@@ -54,8 +44,8 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-slate-400" />
-                <a href="mailto:info@aulawellenglish.com" className="text-slate-300 hover:text-white transition-colors">
-                  info@aulawellenglish.com
+                <a href="mailto:info@aulawell.co" className="text-slate-300 hover:text-white transition-colors">
+                  info@aulawell.co
                 </a>
               </li>
               <li className="flex items-center gap-2">

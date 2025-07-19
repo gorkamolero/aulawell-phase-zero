@@ -130,7 +130,7 @@ export default function HomePage() {
                     </li>
                   </ul>
                   <Button asChild className="w-full bg-navy hover:bg-navy/90">
-                    <Link href="/academic-english">Learn More</Link>
+                    <Link href="/contact">Get Started</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -165,7 +165,7 @@ export default function HomePage() {
                     </li>
                   </ul>
                   <Button asChild className="w-full bg-navy hover:bg-navy/90">
-                    <Link href="/english-language">Learn More</Link>
+                    <Link href="/contact">Get Started</Link>
                   </Button>
                 </CardContent>
               </Card>
