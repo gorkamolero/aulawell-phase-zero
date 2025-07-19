@@ -3,7 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, X } from "lucide-react"
+import { Menu, X, GraduationCap, BookOpen } from "lucide-react"
 
 import {
   NavigationMenu,
@@ -17,18 +17,18 @@ import {
 import { cn } from "@/lib/utils"
 
 const academicEnglishItems = [
-  { title: "KS3", href: "/academic-english/ks3", description: "Key Stage 3 English support" },
-  { title: "GCSE", href: "/academic-english/gcse", description: "GCSE English preparation" },
-  { title: "IGCSE", href: "/academic-english/igcse", description: "International GCSE English" },
-  { title: "A-Level", href: "/academic-english/a-level", description: "A-Level English courses" },
-  { title: "IB", href: "/academic-english/ib", description: "International Baccalaureate English" },
+  { title: "KS3", description: "Key Stage 3 English support" },
+  { title: "GCSE", description: "GCSE English preparation" },
+  { title: "IGCSE", description: "International GCSE English" },
+  { title: "A-Level", description: "A-Level English courses" },
+  { title: "IB", description: "International Baccalaureate English" },
 ]
 
 const englishLanguageItems = [
-  { title: "General English", href: "/english-language/general", description: "Improve your everyday English" },
-  { title: "FCE", href: "/english-language/fce", description: "First Certificate preparation" },
-  { title: "Advanced", href: "/english-language/advanced", description: "Advanced English courses" },
-  { title: "IELTS", href: "/english-language/ielts", description: "IELTS exam preparation" },
+  { title: "General English", description: "Improve your everyday English" },
+  { title: "FCE", description: "First Certificate preparation" },
+  { title: "Advanced", description: "Advanced English courses" },
+  { title: "IELTS", description: "IELTS exam preparation" },
 ]
 
 export function Navigation() {
@@ -37,15 +37,15 @@ export function Navigation() {
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 transition-transform hover:scale-105">
             <Image
               src="/aulawell-logo.png"
               alt="Aulawell English"
-              width={150}
-              height={40}
-              className="h-10 w-auto"
+              width={200}
+              height={60}
+              className="h-14 w-auto"
               priority
             />
           </Link>
@@ -73,9 +73,22 @@ export function Navigation() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Academic English</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
+                    <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                      <li className="row-span-3">
+                        <NavigationMenuLink asChild>
+                          <div className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-navy/10 to-navy/20 p-6 no-underline outline-none focus:shadow-md">
+                            <GraduationCap className="h-6 w-6 text-navy" />
+                            <div className="mb-2 mt-4 text-lg font-medium text-navy">
+                              Academic Excellence
+                            </div>
+                            <p className="text-sm leading-tight text-navy/80">
+                              Expert tutoring for UK curriculum and international qualifications
+                            </p>
+                          </div>
+                        </NavigationMenuLink>
+                      </li>
                       {academicEnglishItems.map((item) => (
-                        <ListItem key={item.title} title={item.title} href={item.href}>
+                        <ListItem key={item.title} title={item.title}>
                           {item.description}
                         </ListItem>
                       ))}
@@ -86,9 +99,22 @@ export function Navigation() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>English Language</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
+                    <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                      <li className="row-span-3">
+                        <NavigationMenuLink asChild>
+                          <div className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-gold/10 to-gold/20 p-6 no-underline outline-none focus:shadow-md">
+                            <BookOpen className="h-6 w-6 text-gold" />
+                            <div className="mb-2 mt-4 text-lg font-medium text-navy">
+                              Language Mastery
+                            </div>
+                            <p className="text-sm leading-tight text-navy/80">
+                              From everyday English to professional certifications
+                            </p>
+                          </div>
+                        </NavigationMenuLink>
+                      </li>
                       {englishLanguageItems.map((item) => (
-                        <ListItem key={item.title} title={item.title} href={item.href}>
+                        <ListItem key={item.title} title={item.title}>
                           {item.description}
                         </ListItem>
                       ))}
@@ -136,14 +162,12 @@ export function Navigation() {
                 <p className="text-lg font-medium">Academic English</p>
                 <div className="ml-4 space-y-2">
                   {academicEnglishItems.map((item) => (
-                    <Link
+                    <div
                       key={item.title}
-                      href={item.href}
-                      className="block text-sm text-gray-600"
-                      onClick={() => setMobileMenuOpen(false)}
+                      className="block text-sm text-gray-600 py-1"
                     >
                       {item.title}
-                    </Link>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -152,14 +176,12 @@ export function Navigation() {
                 <p className="text-lg font-medium">English Language</p>
                 <div className="ml-4 space-y-2">
                   {englishLanguageItems.map((item) => (
-                    <Link
+                    <div
                       key={item.title}
-                      href={item.href}
-                      className="block text-sm text-gray-600"
-                      onClick={() => setMobileMenuOpen(false)}
+                      className="block text-sm text-gray-600 py-1"
                     >
                       {item.title}
-                    </Link>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -176,16 +198,16 @@ export function Navigation() {
 }
 
 const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
+  React.ElementRef<"div">,
+  React.ComponentPropsWithoutRef<"div">
 >(({ className, title, children, ...props }, ref) => {
   return (
     <li>
       <NavigationMenuLink asChild>
-        <a
+        <div
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "block select-none space-y-1 rounded-md p-3 leading-none outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground cursor-default",
             className
           )}
           {...props}
@@ -194,7 +216,7 @@ const ListItem = React.forwardRef<
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
           </p>
-        </a>
+        </div>
       </NavigationMenuLink>
     </li>
   )
