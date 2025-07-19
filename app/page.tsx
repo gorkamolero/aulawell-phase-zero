@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { GraduationCap, Users, BookOpen, Target, Star, CheckCircle } from "lucide-react"
 import { FadeIn } from "@/components/ui/fade-in"
@@ -29,12 +30,12 @@ export default function HomePage() {
               Private Lessons and Group Classes for All Levels
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="text-lg font-medium text-gold hover:text-gold/80 underline underline-offset-4 transition-colors">
-                Book Free Consultation
-              </Link>
-              <Link href="#services" className="text-lg font-medium text-navy hover:text-navy/80 underline underline-offset-4 transition-colors">
-                View Our Courses
-              </Link>
+              <Button asChild size="lg" className="bg-gold hover:bg-gold/90 text-white border-0 shadow-lg hover:shadow-xl transition-all">
+                <Link href="/contact">Book Free Consultation</Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="border-navy text-navy hover:bg-navy hover:text-white transition-all">
+                <Link href="#services">View Our Courses</Link>
+              </Button>
             </div>
           </FadeIn>
         </div>
@@ -81,9 +82,9 @@ export default function HomePage() {
                       <span>Exam board expertise</span>
                     </li>
                   </ul>
-                  <Link href="/academic-english" className="inline-block w-full text-center text-navy hover:text-navy/80 font-medium underline underline-offset-4 transition-colors">
-                    Learn More →
-                  </Link>
+                  <Button asChild className="w-full bg-navy hover:bg-navy/90">
+                    <Link href="/academic-english">Learn More</Link>
+                  </Button>
                 </CardContent>
               </Card>
             </FadeIn>
@@ -116,9 +117,9 @@ export default function HomePage() {
                       <span>Speaking & writing skills</span>
                     </li>
                   </ul>
-                  <Link href="/english-language" className="inline-block w-full text-center text-navy hover:text-navy/80 font-medium underline underline-offset-4 transition-colors">
-                    Learn More →
-                  </Link>
+                  <Button asChild className="w-full bg-navy hover:bg-navy/90">
+                    <Link href="/english-language">Learn More</Link>
+                  </Button>
                 </CardContent>
               </Card>
             </FadeIn>
@@ -216,9 +217,9 @@ export default function HomePage() {
                     </li>
                   </ul>
                   <p className="text-sm text-slate-600 mb-4">Perfect for students who need intensive support or have specific goals</p>
-                  <Link href="/contact" className="inline-block w-full text-center text-gold hover:text-gold/80 font-medium underline underline-offset-4 transition-colors">
-                    Book Private Lesson →
-                  </Link>
+                  <Button asChild className="w-full bg-gold hover:bg-gold/90 text-white">
+                    <Link href="/contact">Book Private Lesson</Link>
+                  </Button>
                 </CardContent>
               </Card>
             </FadeIn>
@@ -248,9 +249,9 @@ export default function HomePage() {
                     </li>
                   </ul>
                   <p className="text-sm text-slate-600 mb-4">Ideal for students who enjoy collaborative learning</p>
-                  <Link href="/contact" className="inline-block w-full text-center text-gold hover:text-gold/80 font-medium underline underline-offset-4 transition-colors">
-                    Join a Group Class →
-                  </Link>
+                  <Button asChild className="w-full bg-gold hover:bg-gold/90 text-white">
+                    <Link href="/contact">Join a Group Class</Link>
+                  </Button>
                 </CardContent>
               </Card>
             </FadeIn>
@@ -338,9 +339,9 @@ export default function HomePage() {
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Book a free consultation to discuss your goals and create a personalized learning plan
             </p>
-            <Link href="/contact" className="inline-block text-lg font-medium text-white hover:text-white/90 underline underline-offset-4 transition-colors">
-              Get Started Today →
-            </Link>
+            <Button asChild size="lg" className="bg-gold hover:bg-gold/90 text-white border-0 shadow-lg hover:shadow-xl transition-all">
+              <Link href="/contact">Get Started Today</Link>
+            </Button>
           </FadeIn>
         </div>
       </section>
