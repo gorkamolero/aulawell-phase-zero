@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { GraduationCap, Users, BookOpen, Target, Star, CheckCircle } from "lucide-react"
@@ -19,25 +20,69 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-navy/5 via-white to-gold/5 py-20 lg:py-32">
-        <div className="absolute inset-0 opacity-50" style={{backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239CA3AF' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E)")`}}></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <FadeIn className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-navy mb-6 font-serif">
-              Expert English Tutoring for Academic Success
-            </h1>
-            <p className="text-xl text-slate-600 mb-8">
-              Private Lessons and Group Classes for All Levels
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-gold hover:bg-gold/90 text-white border-0 shadow-lg hover:shadow-xl transition-all">
-                <Link href="/contact">Book Free Consultation</Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="border-navy text-navy hover:bg-navy hover:text-white transition-all">
-                <Link href="#services">View Our Courses</Link>
-              </Button>
+      <section className="relative bg-navy text-white min-h-[85vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 opacity-10" style={{backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E)")`}}></div>
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <FadeIn>
+                <div className="inline-flex items-center gap-2 text-gold text-sm font-semibold tracking-wider uppercase mb-6">
+                  <span className="w-12 h-px bg-gold"></span>
+                  Private Lessons / Groups
+                </div>
+                <h1 className="text-5xl sm:text-6xl font-bold mb-6 leading-tight font-serif">
+                  Expert English Tutoring for Academic Success
+                </h1>
+              </FadeIn>
+              
+              <FadeIn delay={200}>
+                <p className="text-xl text-gray-200 mb-8">
+                  Professional English tutoring for Academic English (GCSE, A-Level, IB) and Language courses (IELTS, FCE)
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                  <Button asChild size="lg" className="bg-gold hover:bg-gold/90 text-navy font-semibold border-0 shadow-lg hover:shadow-xl transition-all">
+                    <Link href="/contact">Book Free Consultation</Link>
+                  </Button>
+                  <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-navy transition-all">
+                    <Link href="#services">View Our Courses</Link>
+                  </Button>
+                </div>
+              </FadeIn>
+
+              <FadeIn delay={400}>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="text-gold w-5 h-5 flex-shrink-0" />
+                    <span>Expert Native English-Speaking Tutors</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="text-gold w-5 h-5 flex-shrink-0" />
+                    <span>Personalized Learning Plans</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="text-gold w-5 h-5 flex-shrink-0" />
+                    <span>Proven Results with High Success Rates</span>
+                  </div>
+                </div>
+              </FadeIn>
             </div>
-          </FadeIn>
+
+            <FadeIn delay={200} className="relative">
+              <div className="relative h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/student-studying.jpg"
+                  alt="English tutoring student"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-navy/20 to-transparent" />
+                {/* Decorative elements */}
+                <div className="absolute -top-4 -right-4 w-24 h-24 bg-gold/20 rounded-full blur-2xl" />
+                <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-blue-400/10 rounded-full blur-2xl" />
+              </div>
+            </FadeIn>
+          </div>
         </div>
       </section>
 
