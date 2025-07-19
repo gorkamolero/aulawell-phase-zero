@@ -15,11 +15,11 @@ export function ContactBar() {
           </Link>
           
           <Link
-            href="mailto:info@aulawellenglish.com"
+            href="mailto:info@aulawell.co"
             className="flex items-center gap-2 hover:text-gold transition-colors"
           >
             <Mail className="h-4 w-4" />
-            <span>info@aulawellenglish.com</span>
+            <span>info@aulawell.co</span>
           </Link>
           
           <Link
