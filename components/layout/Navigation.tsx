@@ -12,7 +12,6 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { cn } from "@/lib/utils"
 
@@ -37,15 +36,15 @@ export function Navigation() {
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-28 md:h-32 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 transition-transform hover:scale-105">
             <Image
               src="/aulawell-logo.png"
               alt="Aulawell English"
-              width={200}
-              height={60}
-              className="h-14 w-auto"
+              width={400}
+              height={100}
+              className="h-24 md:h-28 w-auto"
               priority
             />
           </Link>
@@ -56,7 +55,7 @@ export function Navigation() {
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild>
-                    <Link href="/" className={navigationMenuTriggerStyle()}>
+                    <Link href="/" className="inline-flex h-9 w-max items-center justify-center px-4 py-2 text-sm font-medium text-navy hover:text-gold transition-colors">
                       Home
                     </Link>
                   </NavigationMenuLink>
@@ -64,14 +63,14 @@ export function Navigation() {
 
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild>
-                    <Link href="/about" className={navigationMenuTriggerStyle()}>
+                    <Link href="/about" className="inline-flex h-9 w-max items-center justify-center px-4 py-2 text-sm font-medium text-navy hover:text-gold transition-colors">
                       About
                     </Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger>Academic English</NavigationMenuTrigger>
+                  <NavigationMenuTrigger className="text-navy hover:text-gold data-[state=open]:text-gold bg-transparent hover:bg-transparent data-[state=open]:bg-transparent">Academic English</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                       <li className="row-span-3">
@@ -97,7 +96,7 @@ export function Navigation() {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger>English Language</NavigationMenuTrigger>
+                  <NavigationMenuTrigger className="text-navy hover:text-gold data-[state=open]:text-gold bg-transparent hover:bg-transparent data-[state=open]:bg-transparent">English Language</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                       <li className="row-span-3">
@@ -124,7 +123,7 @@ export function Navigation() {
 
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild>
-                    <Link href="/contact" className={navigationMenuTriggerStyle()}>
+                    <Link href="/contact" className="inline-flex h-9 w-max items-center justify-center px-4 py-2 text-sm font-medium text-navy hover:text-gold transition-colors">
                       Contact
                     </Link>
                   </NavigationMenuLink>
