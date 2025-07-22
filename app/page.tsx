@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { GraduationCap, BookOpen, Target, Star, CheckCircle } from "lucide-react"
 import { FadeIn } from "@/components/ui/fade-in"
+import { CONTACT_INFO } from "@/lib/constants"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -44,7 +45,7 @@ export default function HomePage() {
                     <Link href="/contact">Book Free Consultation</Link>
                   </Button>
                   <Button asChild size="lg" className="bg-white/10 hover:bg-white/20 text-white border border-white/20 shadow-lg hover:shadow-xl transition-all">
-                    <a href="https://wa.me/447123456789" target="_blank" rel="noopener noreferrer">
+                    <a href={`https://wa.me/${CONTACT_INFO.WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer">
                       WhatsApp Me
                     </a>
                   </Button>
@@ -72,7 +73,7 @@ export default function HomePage() {
             <FadeIn delay={200} className="relative">
               <div className="relative h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/student-studying.jpg"
+                  src="/main.jpeg"
                   alt="English tutoring student"
                   fill
                   className="object-cover"
