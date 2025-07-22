@@ -4,4 +4,5 @@ export const CONTACT_INFO = {
   PHONE_DISPLAY: "+34 641 550 069",
   PHONE_HREF: "tel:+34641550069",
   WHATSAPP_NUMBER: "351910665051",
+  LOCATION: "Madrid / Lisboa",
 } as const
