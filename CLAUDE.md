@@ -21,3 +21,4 @@ This project uses **pnpm** as the package manager. Use `pnpm` instead of `npm` f
 - NEVER run `pnpm dev` or any development server commands
 - Only run build, lint, and test commands when needed
 - I am an AI assistant, not a human - I cannot view running applications
+- Always use `&apos;` instead of apostrophes in JSX/TSX files to avoid React/ESLint errors
