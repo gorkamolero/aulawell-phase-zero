@@ -177,49 +177,88 @@ export default function HomePage() {
       {/* Why Choose Us Section */}
       <section className="py-20 bg-gradient-to-b from-white to-navy/5">
         <div className="container mx-auto px-4">
-          <FadeIn className="text-center mb-12">
+          <FadeIn className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-navy mb-4 font-serif">
-              Why Choose Aulawell English?
+              Why Choose Aulawell?
             </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              We&apos;re committed to helping every student reach their full potential
-            </p>
           </FadeIn>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="max-w-4xl mx-auto space-y-12">
             <FadeIn delay={100}>
-              <div className="text-center">
-                <div className="bg-navy/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Users className="h-8 w-8 text-navy" />
+              <div className="flex flex-col md:flex-row gap-6 items-start">
+                <div className="flex-shrink-0">
+                  <div className="bg-gold/10 rounded-full w-16 h-16 flex items-center justify-center">
+                    <GraduationCap className="h-8 w-8 text-gold" />
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-navy">Expert Tutors</h3>
-                <p className="text-slate-600">
-                  Native English-speaking tutors with proven track records in exam preparation
-                </p>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold mb-3 text-navy">Global Expertise, Local Insight</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    With an international background and teaching experience spanning Europe, Latin America, and Asia, our tutors brings a deep cultural understanding to every lesson—helping students worldwide feel confident and supported.
+                  </p>
+                </div>
               </div>
             </FadeIn>
+
+            <div className="border-t border-slate-200"></div>
 
             <FadeIn delay={200}>
-              <div className="text-center">
-                <div className="bg-gold/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Target className="h-8 w-8 text-gold" />
+              <div className="flex flex-col md:flex-row gap-6 items-start">
+                <div className="flex-shrink-0">
+                  <div className="bg-navy/10 rounded-full w-16 h-16 flex items-center justify-center">
+                    <Target className="h-8 w-8 text-navy" />
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-navy">Personalized Learning</h3>
-                <p className="text-slate-600">
-                  Tailored lessons that adapt to your learning style and goals
-                </p>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold mb-3 text-navy">Tailored for Every Learner</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Whether you're preparing for school exams, university essays, job applications, or simply want to improve your conversational fluency, our bespoke programmes are built around you.
+                  </p>
+                </div>
               </div>
             </FadeIn>
 
+            <div className="border-t border-slate-200"></div>
+
             <FadeIn delay={300}>
-              <div className="text-center">
-                <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Star className="h-8 w-8 text-green-600" />
+              <div className="flex flex-col md:flex-row gap-6 items-start">
+                <div className="flex-shrink-0">
+                  <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center">
+                    <BookOpen className="h-8 w-8 text-green-600" />
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-navy">Proven Results</h3>
-                <p className="text-slate-600">
-                  High success rates with students achieving their target grades
-                </p>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold mb-3 text-navy">Dual Specialisms = Better Results</h3>
+                  <p className="text-slate-600 leading-relaxed mb-3">
+                    You get the best of both:
+                  </p>
+                  <ul className="space-y-2 text-slate-600">
+                    <li className="flex items-start gap-2">
+                      <span className="font-semibold">Academic English</span> – critical reading, essay writing, research skills, SAT/AP/IB prep.
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="font-semibold">General English</span> – grammar, vocabulary, speaking, listening, pronunciation.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </FadeIn>
+
+            <div className="border-t border-slate-200"></div>
+
+            <FadeIn delay={400}>
+              <div className="flex flex-col md:flex-row gap-6 items-start">
+                <div className="flex-shrink-0">
+                  <div className="bg-gold/10 rounded-full w-16 h-16 flex items-center justify-center">
+                    <Star className="h-8 w-8 text-gold" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold mb-3 text-navy">Proven Track Record</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Students have earned spots at top schools and universities worldwide—including Oxford, Cambridge, Princeton, Duke—and topped language exams across multiple levels.
+                  </p>
+                </div>
               </div>
             </FadeIn>
           </div>
