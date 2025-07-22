@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Phone, Mail, MessageCircle, MapPin, Clock } from "lucide-react"
+import { CONTACT_INFO } from "@/lib/constants"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -163,8 +164,8 @@ export default function ContactPage() {
                     <Phone className="h-6 w-6 text-blue-600 mt-1" />
                     <div>
                       <h3 className="font-semibold mb-1">Phone</h3>
-                      <a href="tel:+447123456789" className="text-slate-600 hover:text-blue-600">
-                        +44 7123 456789
+                      <a href={CONTACT_INFO.PHONE_HREF} className="text-slate-600 hover:text-blue-600">
+                        {CONTACT_INFO.PHONE_DISPLAY}
                       </a>
                     </div>
                   </div>
@@ -173,8 +174,8 @@ export default function ContactPage() {
                     <Mail className="h-6 w-6 text-blue-600 mt-1" />
                     <div>
                       <h3 className="font-semibold mb-1">Email</h3>
-                      <a href="mailto:info@aulawell.co" className="text-slate-600 hover:text-blue-600">
-                        info@aulawell.co
+                      <a href={`mailto:${CONTACT_INFO.EMAIL}`} className="text-slate-600 hover:text-blue-600">
+                        {CONTACT_INFO.EMAIL}
                       </a>
                     </div>
                   </div>
@@ -184,7 +185,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold mb-1">WhatsApp</h3>
                       <a
-                        href="https://wa.me/447123456789?text=Hi,%20I'm%20interested%20in%20English%20tutoring"
+                        href={`https://wa.me/${CONTACT_INFO.WHATSAPP_NUMBER}?text=Hi,%20I'm%20interested%20in%20tutoring`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-slate-600 hover:text-green-600"
@@ -223,7 +224,7 @@ export default function ContactPage() {
                     </p>
                     <Button asChild className="bg-green-600 hover:bg-green-700">
                       <a
-                        href="https://wa.me/447123456789?text=Hi,%20I'm%20interested%20in%20English%20tutoring"
+                        href={`https://wa.me/${CONTACT_INFO.WHATSAPP_NUMBER}?text=Hi,%20I'm%20interested%20in%20tutoring`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
