@@ -199,7 +199,7 @@ export default function ContactPage() {
                     <MapPin className="h-6 w-6 text-blue-600 mt-1" />
                     <div>
                       <h3 className="font-semibold mb-1">Location</h3>
-                      <p className="text-slate-600">London, UK</p>
+                      <p className="text-slate-600">{CONTACT_INFO.LOCATION}</p>
                       <p className="text-sm text-slate-500">Online tutoring available worldwide</p>
                     </div>
                   </div>
