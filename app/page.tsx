@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { GraduationCap, Users, BookOpen, Target, Star, CheckCircle } from "lucide-react"
+import { GraduationCap, BookOpen, Target, Star, CheckCircle } from "lucide-react"
 import { FadeIn } from "@/components/ui/fade-in"
 import type { Metadata } from "next"
 
@@ -212,7 +212,7 @@ export default function HomePage() {
                 <div className="flex-1">
                   <h3 className="text-xl font-bold mb-3 text-navy">Tailored for Every Learner</h3>
                   <p className="text-slate-600 leading-relaxed">
-                    Whether you're preparing for school exams, university essays, job applications, or simply want to improve your conversational fluency, our bespoke programmes are built around you.
+                    Whether you&apos;re preparing for school exams, university essays, job applications, or simply want to improve your conversational fluency, our bespoke programmes are built around you.
                   </p>
                 </div>
               </div>
