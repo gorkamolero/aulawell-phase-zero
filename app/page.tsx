@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { GraduationCap, BookOpen, Target, Star, CheckCircle } from "lucide-react"
 import { FadeIn } from "@/components/ui/fade-in"
 import { CONTACT_INFO } from "@/lib/constants"
@@ -29,7 +29,7 @@ export default function HomePage() {
               <FadeIn>
                 <div className="inline-flex items-center gap-2 text-gold text-sm font-semibold tracking-wider uppercase mb-6">
                   <span className="w-12 h-px bg-gold"></span>
-                  Private Lessons / Groups
+                  Unlock Potential
                 </div>
                 <h1 className="text-5xl sm:text-6xl font-bold mb-6 leading-tight font-serif">
                   Expert English Tutoring for Academic Success
@@ -94,40 +94,51 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <FadeIn className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-navy mb-4 font-serif">
-              Our English Tutoring Services
+              Who and What We Support at Aulawell
             </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Choose from our comprehensive range of English courses designed to help you achieve your goals
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              We provide English tutoring for students aged 9 - 18 as well as adults all over the globe. Whether you want to enter a particular school, improve your child&apos;s confidence in English or work with a tutor for Home Education, Aulawell is here to answer your questions, mentor your child and give you peace of mind.
             </p>
           </FadeIn>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <FadeIn delay={100}>
               <Card className="hover:shadow-xl transition-all duration-300 h-full hover:-translate-y-1 bg-white border-navy/10">
                 <CardHeader>
                   <div className="bg-navy/10 rounded-full w-16 h-16 flex items-center justify-center mb-4">
                     <GraduationCap className="h-8 w-8 text-navy" />
                   </div>
-                  <CardTitle className="text-navy">Academic English</CardTitle>
-                  <CardDescription>KS3 to IB Preparation</CardDescription>
+                  <CardTitle className="text-navy text-xl">Academic English</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2 mb-6">
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600" />
-                      <span>GCSE & IGCSE English</span>
+                  <ul className="space-y-2 mb-6 text-sm">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span>11+, 12+, SATS, Common Entrance</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600" />
-                      <span>A-Level preparation</span>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span>General Certificate of Secondary Education (GCSEs)</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600" />
-                      <span>Essay writing & analysis</span>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span>International General Certificate of Secondary Education (IGCSEs)</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600" />
-                      <span>Exam board expertise</span>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span>A levels</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span>International Baccalaureate (IB)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span>Exam Board expertise</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span>Essay Writing Support</span>
                     </li>
                   </ul>
                   <Button asChild className="w-full bg-navy hover:bg-navy/90">
@@ -143,26 +154,71 @@ export default function HomePage() {
                   <div className="bg-gold/10 rounded-full w-16 h-16 flex items-center justify-center mb-4">
                     <BookOpen className="h-8 w-8 text-gold" />
                   </div>
-                  <CardTitle className="text-navy">English Language</CardTitle>
-                  <CardDescription>General & Exam Preparation</CardDescription>
+                  <CardTitle className="text-navy text-xl">English Language</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2 mb-6">
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600" />
-                      <span>General English fluency</span>
+                  <ul className="space-y-2 mb-6 text-sm">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span>General English Fluency (A1 - C1)</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600" />
-                      <span>FCE & IELTS preparation</span>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span>First Certificate Examination (FCE)</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600" />
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span>Cambridge Advanced Examination</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span>IELTS Preparation</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                       <span>Business English</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-600" />
-                      <span>Speaking & writing skills</span>
+                  </ul>
+                  <Button asChild className="w-full bg-navy hover:bg-navy/90">
+                    <Link href="/contact">Get Started</Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            </FadeIn>
+
+            <FadeIn delay={300}>
+              <Card className="hover:shadow-xl transition-all duration-300 h-full hover:-translate-y-1 bg-white border-green-600/20">
+                <CardHeader>
+                  <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                    <Target className="h-8 w-8 text-green-600" />
+                  </div>
+                  <CardTitle className="text-navy text-xl">Further Support</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 mb-6 text-sm">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span>Home Education</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span>Study Skills support</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span>Mentoring and Coaching</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span>SEN Specialist support</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span>Personal Statement Masterclass (US, UK & AUS)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span>SAT preparation (US universities)</span>
                     </li>
                   </ul>
                   <Button asChild className="w-full bg-navy hover:bg-navy/90">
@@ -271,41 +327,41 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <FadeIn className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-navy mb-4 font-serif">
-              Private Lessons / Groups
+              Tutorial Options
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Choose the learning format that works best for you
+              We offer a range of tutoring times and formats to accommodate our global network of families.
             </p>
           </FadeIn>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <FadeIn delay={100}>
               <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full bg-white/80">
                 <CardHeader>
-                  <CardTitle className="text-navy">Private 1-to-1 Lessons</CardTitle>
+                  <CardTitle className="text-navy">Face-to-Face Tuition</CardTitle>
                 </CardHeader>
                 <CardContent>
+                  <p className="text-slate-600 mb-4">We provide convenient face-to-face tutoring sessions or small groups at your home. This service is only available for families and students based in Madrid, Spain.</p>
                   <ul className="space-y-2 mb-6">
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-green-600 mt-0.5" />
-                      <span>Fully personalized curriculum</span>
+                      <span>One-to-one sessions</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-green-600 mt-0.5" />
-                      <span>Flexible scheduling</span>
+                      <span>Small group sessions</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-green-600 mt-0.5" />
-                      <span>Focused attention on individual needs</span>
+                      <span>Holiday top-up sessions</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-green-600 mt-0.5" />
-                      <span>Rapid progress and improvement</span>
+                      <span>Holiday booster courses (2 hours a day for 3 days)</span>
                     </li>
                   </ul>
-                  <p className="text-sm text-slate-600 mb-4">Perfect for students who need intensive support or have specific goals</p>
                   <Button asChild className="w-full bg-gold hover:bg-gold/90 text-white">
-                    <Link href="/contact">Book Private Lesson</Link>
+                    <Link href="/contact">Get Started</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -314,30 +370,44 @@ export default function HomePage() {
             <FadeIn delay={200}>
               <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full bg-white/80">
                 <CardHeader>
-                  <CardTitle className="text-navy">Small Group Classes</CardTitle>
+                  <CardTitle className="text-navy">Online Tuition</CardTitle>
                 </CardHeader>
                 <CardContent>
+                  <p className="text-slate-600 mb-4">Our flagship tutoring provision for families who prefer the flexibility of online tutoring.</p>
                   <ul className="space-y-2 mb-6">
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-green-600 mt-0.5" />
-                      <span>Maximum 6 students per class</span>
+                      <span>One-to-one sessions</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-green-600 mt-0.5" />
-                      <span>Learn with peers at similar levels</span>
+                      <span>Small group sessions</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-green-600 mt-0.5" />
-                      <span>Interactive and engaging sessions</span>
+                      <span>Holiday top-up sessions</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-green-600 mt-0.5" />
-                      <span>More affordable option</span>
+                      <span>Holiday booster courses (2 hours a day for 3 days)</span>
                     </li>
                   </ul>
-                  <p className="text-sm text-slate-600 mb-4">Ideal for students who enjoy collaborative learning</p>
                   <Button asChild className="w-full bg-gold hover:bg-gold/90 text-white">
-                    <Link href="/contact">Join a Group Class</Link>
+                    <Link href="/contact">Get Started</Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            </FadeIn>
+
+            <FadeIn delay={300}>
+              <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full bg-white/80">
+                <CardHeader>
+                  <CardTitle className="text-navy">Additional Support and Options</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-600 mb-6">If these tutoring options don&apos;t suit you or your child&apos;s needs, please contact us and we will try to accommodate your requirements.</p>
+                  <Button asChild className="w-full bg-gold hover:bg-gold/90 text-white">
+                    <Link href="/contact">Contact Us</Link>
                   </Button>
                 </CardContent>
               </Card>
