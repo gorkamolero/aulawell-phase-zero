@@ -66,44 +66,44 @@ export function Footer() {
               <Image
                 src="/payment-logos/apple-pay.svg"
                 alt="Apple Pay"
-                width={60}
-                height={40}
-                className="h-8 md:h-10 w-auto opacity-80 hover:opacity-100 transition-opacity"
+                width={50}
+                height={24}
+                className="h-6 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
               />
               <Image
                 src="/payment-logos/visa.svg"
                 alt="Visa"
-                width={60}
-                height={40}
-                className="h-8 md:h-10 w-auto opacity-80 hover:opacity-100 transition-opacity"
+                width={50}
+                height={24}
+                className="h-6 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
               />
               <Image
                 src="/payment-logos/mastercard.svg"
                 alt="Mastercard"
-                width={60}
-                height={40}
-                className="h-8 md:h-10 w-auto opacity-80 hover:opacity-100 transition-opacity"
+                width={50}
+                height={24}
+                className="h-6 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
               />
               <Image
                 src="/payment-logos/google-pay.svg"
                 alt="Google Pay"
-                width={60}
-                height={40}
-                className="h-8 md:h-10 w-auto opacity-80 hover:opacity-100 transition-opacity"
+                width={50}
+                height={24}
+                className="h-6 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
               />
               <Image
                 src="/payment-logos/paypal.svg"
                 alt="PayPal"
-                width={60}
-                height={40}
-                className="h-8 md:h-10 w-auto opacity-80 hover:opacity-100 transition-opacity"
+                width={50}
+                height={24}
+                className="h-6 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
               />
               <Image
-                src="/payment-logos/revolut.png"
+                src="/payment-logos/revolut.svg"
                 alt="Revolut"
-                width={60}
-                height={40}
-                className="h-8 md:h-10 w-auto opacity-80 hover:opacity-100 transition-opacity"
+                width={80}
+                height={24}
+                className="h-6 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
               />
             </div>
           </div>
