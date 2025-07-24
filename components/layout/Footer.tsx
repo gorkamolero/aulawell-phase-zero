@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Phone, Mail, MapPin } from "lucide-react"
 import { CONTACT_INFO } from "@/lib/constants"
 
@@ -57,8 +58,58 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/20 mt-8 pt-8 text-center text-white/70">
-          <p>&copy; {new Date().getFullYear()} Aulawell Tuition. All rights reserved.</p>
+        {/* Payment Methods */}
+        <div className="border-t border-white/20 mt-8 pt-8">
+          <div className="text-center mb-6">
+            <p className="text-slate-300 mb-4">Accepted Payment Methods</p>
+            <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6">
+              <Image
+                src="/payment-logos/apple-pay.svg"
+                alt="Apple Pay"
+                width={60}
+                height={40}
+                className="h-8 md:h-10 w-auto opacity-80 hover:opacity-100 transition-opacity"
+              />
+              <Image
+                src="/payment-logos/visa.svg"
+                alt="Visa"
+                width={60}
+                height={40}
+                className="h-8 md:h-10 w-auto opacity-80 hover:opacity-100 transition-opacity"
+              />
+              <Image
+                src="/payment-logos/mastercard.svg"
+                alt="Mastercard"
+                width={60}
+                height={40}
+                className="h-8 md:h-10 w-auto opacity-80 hover:opacity-100 transition-opacity"
+              />
+              <Image
+                src="/payment-logos/google-pay.svg"
+                alt="Google Pay"
+                width={60}
+                height={40}
+                className="h-8 md:h-10 w-auto opacity-80 hover:opacity-100 transition-opacity"
+              />
+              <Image
+                src="/payment-logos/paypal.svg"
+                alt="PayPal"
+                width={60}
+                height={40}
+                className="h-8 md:h-10 w-auto opacity-80 hover:opacity-100 transition-opacity"
+              />
+              <Image
+                src="/payment-logos/revolut.png"
+                alt="Revolut"
+                width={60}
+                height={40}
+                className="h-8 md:h-10 w-auto opacity-80 hover:opacity-100 transition-opacity"
+              />
+            </div>
+          </div>
+          <div className="text-center text-white/70">
+            <p>&copy; {new Date().getFullYear()} Aulawell Tuition. All rights reserved.</p>
+          </div>
         </div>
       </div>
     </footer>
