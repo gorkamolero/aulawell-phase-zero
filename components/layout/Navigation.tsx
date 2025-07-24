@@ -16,18 +16,21 @@ import {
 import { cn } from "@/lib/utils"
 
 const academicEnglishItems = [
-  { title: "KS3", description: "Key Stage 3 English support" },
-  { title: "GCSE", description: "GCSE English preparation" },
-  { title: "IGCSE", description: "International GCSE English" },
-  { title: "A-Level", description: "A-Level English courses" },
-  { title: "IB", description: "International Baccalaureate English" },
+  { title: "Overview", href: "/services#academic-subjects", description: "All academic programs" },
+  { title: "KS3", href: "/services#academic-subjects", description: "Key Stage 3 English support" },
+  { title: "GCSE", href: "/services#academic-subjects", description: "GCSE English preparation" },
+  { title: "IGCSE", href: "/services#academic-subjects", description: "International GCSE English" },
+  { title: "A-Level", href: "/services#academic-subjects", description: "A-Level English courses" },
+  { title: "IB", href: "/services#academic-subjects", description: "International Baccalaureate English" },
 ]
 
 const englishLanguageItems = [
-  { title: "General English", description: "Improve your everyday English" },
-  { title: "FCE", description: "First Certificate preparation" },
-  { title: "Advanced", description: "Advanced English courses" },
-  { title: "IELTS", description: "IELTS exam preparation" },
+  { title: "Overview", href: "/services#english-language", description: "All language programs" },
+  { title: "General English", href: "/services#english-language", description: "Improve your everyday English" },
+  { title: "FCE", href: "/services#english-language", description: "First Certificate preparation" },
+  { title: "Advanced", href: "/services#english-language", description: "Advanced English courses" },
+  { title: "IELTS", href: "/services#english-language", description: "IELTS exam preparation" },
+  { title: "Academic English", href: "/services#academic-english", description: "Academic writing and skills" },
 ]
 
 export function Navigation() {
@@ -75,7 +78,10 @@ export function Navigation() {
                     <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                       <li className="row-span-3">
                         <NavigationMenuLink asChild>
-                          <div className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-navy/10 to-navy/20 p-6 no-underline outline-none focus:shadow-md">
+                          <Link 
+                            href="/services#academic-subjects"
+                            className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-navy/10 to-navy/20 p-6 no-underline outline-none focus:shadow-md hover:scale-[1.02] transition-transform"
+                          >
                             <GraduationCap className="h-6 w-6 text-navy" />
                             <div className="mb-2 mt-4 text-lg font-medium text-navy">
                               Academic Excellence
@@ -83,11 +89,11 @@ export function Navigation() {
                             <p className="text-sm leading-tight text-navy/80">
                               Expert tutoring for UK curriculum and international qualifications
                             </p>
-                          </div>
+                          </Link>
                         </NavigationMenuLink>
                       </li>
                       {academicEnglishItems.map((item) => (
-                        <ListItem key={item.title} title={item.title}>
+                        <ListItem key={item.title} title={item.title} href={item.href}>
                           {item.description}
                         </ListItem>
                       ))}
@@ -101,7 +107,10 @@ export function Navigation() {
                     <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                       <li className="row-span-3">
                         <NavigationMenuLink asChild>
-                          <div className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-gold/10 to-gold/20 p-6 no-underline outline-none focus:shadow-md">
+                          <Link
+                            href="/services#english-language"
+                            className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-gold/10 to-gold/20 p-6 no-underline outline-none focus:shadow-md hover:scale-[1.02] transition-transform"
+                          >
                             <BookOpen className="h-6 w-6 text-gold" />
                             <div className="mb-2 mt-4 text-lg font-medium text-navy">
                               Language Mastery
@@ -109,11 +118,11 @@ export function Navigation() {
                             <p className="text-sm leading-tight text-navy/80">
                               From everyday English to professional certifications
                             </p>
-                          </div>
+                          </Link>
                         </NavigationMenuLink>
                       </li>
                       {englishLanguageItems.map((item) => (
-                        <ListItem key={item.title} title={item.title}>
+                        <ListItem key={item.title} title={item.title} href={item.href}>
                           {item.description}
                         </ListItem>
                       ))}
@@ -161,12 +170,14 @@ export function Navigation() {
                 <p className="text-lg font-medium">Academic English</p>
                 <div className="ml-4 space-y-2">
                   {academicEnglishItems.map((item) => (
-                    <div
+                    <Link
                       key={item.title}
-                      className="block text-sm text-gray-600 py-1"
+                      href={item.href}
+                      className="block text-sm text-gray-600 py-1 hover:text-gold"
+                      onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.title}
-                    </div>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -175,12 +186,14 @@ export function Navigation() {
                 <p className="text-lg font-medium">English Language</p>
                 <div className="ml-4 space-y-2">
                   {englishLanguageItems.map((item) => (
-                    <div
+                    <Link
                       key={item.title}
-                      className="block text-sm text-gray-600 py-1"
+                      href={item.href}
+                      className="block text-sm text-gray-600 py-1 hover:text-gold"
+                      onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.title}
-                    </div>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -197,16 +210,17 @@ export function Navigation() {
 }
 
 const ListItem = React.forwardRef<
-  React.ElementRef<"div">,
-  React.ComponentPropsWithoutRef<"div">
->(({ className, title, children, ...props }, ref) => {
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a"> & { href: string }
+>(({ className, title, children, href, ...props }, ref) => {
   return (
     <li>
       <NavigationMenuLink asChild>
-        <div
+        <Link
           ref={ref}
+          href={href}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground cursor-default",
+            "block select-none space-y-1 rounded-md p-3 leading-none outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
             className
           )}
           {...props}
@@ -215,7 +229,7 @@ const ListItem = React.forwardRef<
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
           </p>
-        </div>
+        </Link>
       </NavigationMenuLink>
     </li>
   )

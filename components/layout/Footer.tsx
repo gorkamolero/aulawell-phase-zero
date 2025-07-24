@@ -58,55 +58,85 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Payment Methods */}
+        {/* Payment Methods and Badges */}
         <div className="border-t border-white/20 mt-8 pt-8">
-          <div className="text-center mb-6">
-            <p className="text-slate-300 mb-4">Accepted Payment Methods</p>
-            <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6">
-              <Image
-                src="/payment-logos/apple-pay.svg"
-                alt="Apple Pay"
-                width={50}
-                height={24}
-                className="h-6 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
-              />
-              <Image
-                src="/payment-logos/visa.svg"
-                alt="Visa"
-                width={50}
-                height={24}
-                className="h-6 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
-              />
-              <Image
-                src="/payment-logos/mastercard.svg"
-                alt="Mastercard"
-                width={50}
-                height={24}
-                className="h-6 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
-              />
-              <Image
-                src="/payment-logos/google-pay.svg"
-                alt="Google Pay"
-                width={50}
-                height={24}
-                className="h-6 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
-              />
-              <Image
-                src="/payment-logos/paypal.svg"
-                alt="PayPal"
-                width={50}
-                height={24}
-                className="h-6 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
-              />
-              <Image
-                src="/payment-logos/revolut.svg"
-                alt="Revolut"
-                width={80}
-                height={24}
-                className="h-6 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
-              />
-            </div>
+          <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6 mb-6">
+            <Image
+              src="/payment-logos/apple-pay.svg"
+              alt="Apple Pay"
+              width={50}
+              height={24}
+              className="h-6 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/payment-logos/visa.svg"
+              alt="Visa"
+              width={50}
+              height={24}
+              className="h-6 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/payment-logos/mastercard.svg"
+              alt="Mastercard"
+              width={50}
+              height={24}
+              className="h-6 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/payment-logos/google-pay.svg"
+              alt="Google Pay"
+              width={50}
+              height={24}
+              className="h-6 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/payment-logos/paypal.svg"
+              alt="PayPal"
+              width={50}
+              height={24}
+              className="h-6 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
+            />
+            <Image
+              src="/payment-logos/revolut.svg"
+              alt="Revolut"
+              width={80}
+              height={24}
+              className="h-6 w-auto brightness-0 invert opacity-80 hover:opacity-100 transition-opacity"
+            />
           </div>
+          
+          {/* Badges */}
+          <div className="flex flex-wrap justify-center items-center gap-6 mb-6">
+            <a 
+              href="https://www.gov.uk/government/organisations/disclosure-and-barring-service/about"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-transform hover:scale-105"
+            >
+              <Image
+                src="/images/badges/dbs-checked.png"
+                alt="DBS Checked"
+                width={150}
+                height={75}
+                className="h-20 w-auto brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+              />
+            </a>
+            <a 
+              href="https://www.thetutorsassociation.org.uk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-transform hover:scale-105"
+            >
+              <Image
+                src="/images/badges/tutors-association.avif"
+                alt="The Tutors&apos; Association Individual Member 2024-2025"
+                width={80}
+                height={30}
+                className="h-10 w-auto brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+              />
+            </a>
+          </div>
+          
           <div className="text-center text-white/70">
             <p>&copy; {new Date().getFullYear()} Aulawell Tuition. All rights reserved.</p>
           </div>
