@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { CheckSquare, ChevronDown, Users, Globe, School, BookOpen, PenTool, Target, Award, MessageSquare } from 'lucide-react'
 import Image from 'next/image'
+import { FadeIn } from '@/components/ui/fade-in'
 import type { Metadata } from 'next'
 
 const metadata: Metadata = {
@@ -110,20 +111,24 @@ export default function ServicesPage() {
         <div className="absolute inset-0 opacity-10" style={{backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E)"}`}}></div>
         <div className="relative z-20 container mx-auto px-4 py-20">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 text-gold text-sm font-semibold tracking-wider uppercase mb-6">
-              <span className="w-12 h-px bg-gold"></span>
-              Excellence in Education
-              <span className="w-12 h-px bg-gold"></span>
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 font-serif">
-              English Language & Academic Excellence
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-200 mb-4">
-              Comprehensive English support from conversational fluency to academic mastery
-            </p>
-            <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
-              Expert tutoring for international students pursuing British & American curricula, delivered by experienced educators with examiner insight
-            </p>
+            <FadeIn>
+              <div className="inline-flex items-center gap-2 text-gold text-sm font-semibold tracking-wider uppercase mb-6">
+                <span className="w-12 h-px bg-gold"></span>
+                Excellence in Education
+                <span className="w-12 h-px bg-gold"></span>
+              </div>
+            </FadeIn>
+            <FadeIn delay={200}>
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 font-serif">
+                English Language & Academic Excellence
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-200 mb-4">
+                Comprehensive English support from conversational fluency to academic mastery
+              </p>
+              <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
+                Expert tutoring for international students pursuing British & American curricula, delivered by experienced educators with examiner insight
+              </p>
+            </FadeIn>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact" className="bg-gold hover:bg-gold/90 text-navy px-8 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl">
                 Book Free Consultation
@@ -140,12 +145,12 @@ export default function ServicesPage() {
       <section className="py-16" id="academic-subjects">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
+            <FadeIn className="text-center mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold text-navy mb-4 font-serif">Academic Subject Tutoring</h2>
               <p className="text-xl text-slate-600">
                 Master British & American curricula with examiner-level insight
               </p>
-            </div>
+            </FadeIn>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
@@ -209,18 +214,30 @@ export default function ServicesPage() {
       <section className="py-20 bg-gradient-to-b from-white to-slate-50" id="english-language">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
+            <FadeIn className="text-center mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold text-navy mb-4 font-serif">English as a Foreign Language</h2>
               <p className="text-xl text-slate-600">
                 From first words to fluent conversations - building confidence at every level
               </p>
-            </div>
+            </FadeIn>
             
-            {/* Top section with image beside the two main categories */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-12">
-              <div className="animate-fade-in-right">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            {/* Top section with image on left beside the two main categories */}
+            <FadeIn delay={200}>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch mb-12">
+                <div>
+                  <div className="relative h-full w-full rounded-2xl overflow-hidden shadow-xl">
+                    <Image
+                      src="/aulawell-empty-section.png"
+                      alt="English language learning"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+                
+                <div className="flex flex-col">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 flex-grow">
+                  <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
                     <div className="flex items-center gap-3 mb-4">
                       <School className="text-gold w-8 h-8" />
                       <h3 className="text-xl font-bold text-navy">Children & Teenagers</h3>
@@ -228,7 +245,7 @@ export default function ServicesPage() {
                     <p className="mb-4 text-gray-700">
                       Engaging, age-appropriate lessons that build confidence alongside competence.
                     </p>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2 flex-grow">
                       {[
                         'Interactive games and activities',
                         'School curriculum support',
@@ -243,7 +260,7 @@ export default function ServicesPage() {
                     </ul>
                   </div>
                   
-                  <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                  <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
                     <div className="flex items-center gap-3 mb-4">
                       <Users className="text-gold w-8 h-8" />
                       <h3 className="text-xl font-bold text-navy">Adults</h3>
@@ -251,7 +268,7 @@ export default function ServicesPage() {
                     <p className="mb-4 text-gray-700">
                       Professional development and life skills through practical English.
                     </p>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2 flex-grow">
                       {[
                         'Business English for professionals',
                         'Everyday conversation skills',
@@ -267,22 +284,12 @@ export default function ServicesPage() {
                   </div>
                 </div>
               </div>
-              
-              <div>
-                <div className="relative h-80 w-full rounded-2xl overflow-hidden shadow-xl">
-                  <Image
-                    src="/aulawell-empty-section.png"
-                    alt="English language learning"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </div>
+            </FadeIn>
             
             {/* Bottom section with "All EFL programs include" */}
-            <div className="max-w-4xl mx-auto">
-              <div className="p-6 bg-slate-100 rounded-xl">
+            <FadeIn delay={400}>
+              <div className="max-w-3xl mx-auto">
+                <div className="p-6 bg-slate-100 rounded-xl">
                 <p className="font-semibold text-navy mb-3">All EFL programs include:</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {[
@@ -298,7 +305,7 @@ export default function ServicesPage() {
                   ))}
                 </div>
               </div>
-            </div>
+            </FadeIn>
           </div>
         </div>
       </section>
