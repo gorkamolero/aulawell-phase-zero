@@ -220,7 +220,7 @@ export default function ServicesPage() {
               <div>
                 <div className="relative h-80 w-full rounded-2xl overflow-hidden shadow-xl">
                   <Image
-                    src="/hero-image.jpg"
+                    src="/aulawell-empty-section.png"
                     alt="English language learning"
                     fill
                     className="object-cover"
