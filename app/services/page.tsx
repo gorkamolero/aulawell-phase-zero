@@ -284,6 +284,7 @@ export default function ServicesPage() {
                   </div>
                 </div>
               </div>
+            </div>
             </FadeIn>
             
             {/* Bottom section with "All EFL programs include" */}
@@ -305,6 +306,7 @@ export default function ServicesPage() {
                   ))}
                 </div>
               </div>
+            </div>
             </FadeIn>
           </div>
         </div>
