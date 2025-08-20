@@ -216,18 +216,8 @@ export default function ServicesPage() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="relative h-80 w-full rounded-2xl overflow-hidden shadow-xl">
-                  <Image
-                    src="/aulawell-empty-section.png"
-                    alt="English language learning"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-              
+            {/* Top section with image beside the two main categories */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-12">
               <div className="animate-fade-in-right">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
@@ -276,22 +266,36 @@ export default function ServicesPage() {
                     </ul>
                   </div>
                 </div>
-                
-                <div className="mt-8 p-6 bg-slate-100 rounded-xl">
-                  <p className="font-semibold text-navy mb-3">All EFL programs include:</p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {[
-                      'Customized learning plans',
-                      'Regular progress assessments',
-                      'Cultural context integration',
-                      'Flexible scheduling for families'
-                    ].map((item, index) => (
-                      <p key={index} className="flex items-center gap-2">
-                        <CheckSquare className="text-gold w-5 h-5" />
-                        <span className="text-gray-700">{item}</span>
-                      </p>
-                    ))}
-                  </div>
+              </div>
+              
+              <div>
+                <div className="relative h-80 w-full rounded-2xl overflow-hidden shadow-xl">
+                  <Image
+                    src="/aulawell-empty-section.png"
+                    alt="English language learning"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+            
+            {/* Bottom section with "All EFL programs include" */}
+            <div className="max-w-4xl mx-auto">
+              <div className="p-6 bg-slate-100 rounded-xl">
+                <p className="font-semibold text-navy mb-3">All EFL programs include:</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  {[
+                    'Customized learning plans',
+                    'Regular progress assessments',
+                    'Cultural context integration',
+                    'Flexible scheduling for families'
+                  ].map((item, index) => (
+                    <p key={index} className="flex items-center gap-2">
+                      <CheckSquare className="text-gold w-5 h-5" />
+                      <span className="text-gray-700">{item}</span>
+                    </p>
+                  ))}
                 </div>
               </div>
             </div>
